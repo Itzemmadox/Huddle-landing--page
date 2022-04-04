@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Huddle landing page with alternating feature blocks</title>
+
+  <link rel="stylesheet" href="../../fontawesome-free-6.0.0-beta3-web/css/all.css">
+  <link rel="stylesheet" href="../../fontawesome-free-6.0.0-beta3-web/css/brands.min.css">
+  <link rel="stylesheet" href="../../fontawesome-free-6.0.0-beta3-web/css/all.min.css">
+  <link rel="stylesheet" href="../../fontawesome-free-6.0.0-beta3-web/css/fontawesome.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&family=PT+Serif:ital,wght@1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700;800&family=Open+Sans:ital,wght@0,400;1,300&family=Work+Sans:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; width: 100%;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    body *, body {
+      box-sizing: border-box;
+    }
+
+    body{
+      margin: 0;
+      font-family: 'Open San', sans-serif;
+      
+    }
+
+    .container{
+      max-width: 100%;
+      height: 380vh;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+    }
+
+    /*******************
+                      *****************
+                                  *********************
+                                                    ********************/
+        /* header styling start*/
+    header{
+      display: flex;
+      flex-wrap: wrap;
+      height: 110vh;
+      background-image: url("./images/bg-hero-desktop.svg");
+      background-color:  hsl(193, 100%, 96%);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    .nav-brand{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+    }
+
+    .nav-brand-box{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+      border: px solid;
+      margin: 3% 5%;
+      background-image: url("images/logo.svg");
+      background-repeat: no-repeat;
+      background-size: 18%;
+    }
+
+    .nav-brand img{
+      width: 255px;
+      height: 28px;
+    }    
+
+    .nav-title{
+        border: px solid;
+        width: 50%;
+        height: 75%;
+    }
+
+    .nav-image{
+      /* border: 1px solid; */
+      width: 50%;
+      height: 75%;
+    }
+
+    .nav-image img{
+      width: 650px;
+    }
+
+    .nav-brand-box button{
+      font-weight: 600;
+      width: 17%;
+      background-color: #fff;
+      font-size: 1rem;
+      font-family: 'Poppins', sans-serif;
+      border: none;
+      border-radius: 25px;
+      padding: 1%;
+
+    }
+
+    .nav-brand-box button a{
+      text-decoration: none;
+      color: #000;
+    }
+
+    .nav-title{
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding-left: 5%;
+      padding-bottom: 5%;
+    }
+
+    .nav-title-heading{
+      border: px solid;
+      font-size: 2.6rem;
+      width: 80%;     
+      margin-bottom: 0;
+    } 
+
+    .nav-subtitle{
+      font-size: 1.1rem;
+      font-weight: 400;
+      padding-right: 15%;
+    }
+
+    .nav-title button{
+      width: 45%;
+      padding: 2.9%;
+      background-color: hsl(322, 100%, 66%);
+      border: none;
+      border-radius: 30px;
+      font-family: 'poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    .nav-title button a{
+      text-decoration: none;
+      color: #fff;
+    }
+    /*******************
+                      *****************
+                                  *********************
+                                                    ********************/
+        /* header styling end*/
+
+    /*******************
+                      *****************
+                                  *********************
+                                                    ********************/
+        /* main styling start*/    
+    main{
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      border: px solid rgb(0, 26, 255);
+      width: 100%;
+      height: 230vh;
+    }
+
+    .main-box-container{
+      display: flex;
+      width: 90%;
+      border-radius: 10px;
+      margin-bottom: 5%;
+      border: px solid;
+      box-shadow: 1px 1px 20px 5px rgba(0,0,0,0.1);
+      height: 70%;
+    }
+
+    
+    .main-box-widget{
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: flex-start;
+      width: 50%;
+      border: px solid;
+    }
+
+    .main-box-widget p{
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.7rem;
+      width: 79%;
+      color: #777;
+      border: px solid;
+    }
+
+
+
+    .main-box-widget h1{
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 0;
+    }
+
+    .main-box-container:nth-of-type(2) > .main-box-widget p{
+      width: 74%;
+      border: px solid;
+    }
+
+    .main-box-container:nth-of-type(1) > .main-box-widget p,
+    .main-box-container:nth-of-type(1) > .main-box-widget h1{
+      margin-left: 20%;
+    }
+
+    .main-box-container:nth-of-type(3) > .main-box-widget p,
+    .main-box-container:nth-of-type(3) > .main-box-widget h1{
+      width: 72%;
+      margin-left: 20%;
+
+    }
+
+    .main-box-image{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 50%;
+      border: px solid;
+      height: 100%;
+      align-items: center;
+    }
+
+    .main-img1{
+      background-image: url("images/illustration-grow-together.svg");
+      background-repeat: no-repeat;
+      background-size: 63%;
+      background-position: right;
+      background-position-x: 90%;
+    }
+
+    .main-img2{
+      background-image: url("images/illustration-flowing-conversation.svg");
+      background-repeat: no-repeat;
+      background-size: 63%;
+      background-position-y: center;
+      background-position-x: 50%;
+    }
+
+    .main-img3{
+      background-image: url("images/illustration-your-users.svg");
+      background-repeat: no-repeat;
+      background-size: 65%;
+      background-position: right;
+      background-position-x: 90%;
+    }
+
+    .main-box-container:nth-of-type(1){
+      margin-top: 10%;
+    }
+
+    /*.main-box-container:nth-of-type(2) > .main-box-image{
+      justify-content: center;
+    }
+
+    .main-box-image img{
+      width: 400px;
+      height: 330px;
+    }*/
+
+    .main-box-special{
+      position: relative;
+      top: 3%;
+      background-color: #fff;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      height: 12%;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 1px 1px 50px 1px  rgba(0,0,0,0.1);
+      margin: 0 auto;
+      width: 50%;
+    }
+
+    .main-box-special button{
+      padding: 4%;
+      width: 50%;
+      border-radius: 35px;
+      border: none;
+      font-weight: 600;
+      font-family: 'Open San', sans-serif;
+      font-size: 1rem;
+      background-color: hsl(322, 100%, 66%);
+    }
+
+    .main-box-special button a{
+      color: #fff;
+      text-decoration: none;
+
+    }
+    /*******************
+                      *****************
+                                  *********************
+                                                    ********************/
+        /* main styling end*/
+
+    /*******************
+                      *****************
+                                  *********************
+                                                    ********************/
+        /* section styling start*/
+    section{
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding-top: 11% ;
+      border: px solid red;
+      height: 75vh;
+      color: #fff;
+      background-color: hsl(192, 100%, 9%)
+    }
+    
+    .section-image{
+      border: 1px solid;
+      width: 90%;
+      height: 15%;
+      background-color: #fff;
+      background-image: url("images/logo.svg");
+      background-repeat: no-repeat;
+      background-size: 18%;
+    }
+
+    .section-box{
+      border: px solid;
+      display: flex;
+      justify-content: space-between;
+      height: 79%;
+      width: 90%;
+    }
+
+    ul{
+      list-style-type: none;
+    }
+
+    ul li{
+      line-height: 2.3rem;
+      font-size: 1.2rem;
+    }
+
+    .section-box1{
+      border: px solid;
+      width: 35%;
+    }
+
+    .section-box1  p{
+      line-height: 1.5rem;
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    .section-box1-main{
+      display: flex;
+      padding-left: 10%;
+      margin-top: 7%;
+    }
+
+    .section-box1-main:nth-of-type(1){
+      background-image: url("images/icon-location.svg");
+      background-repeat: no-repeat;
+      background-size: 5%;
+
+    }
+
+    .section-box1-main:nth-of-type(2){
+      background-image: url("images/icon-phone.svg");
+      background-repeat: no-repeat;
+      background-size: 5%;
+    }
+
+    .section-box1-main:nth-of-type(3){
+      background-image: url("images/icon-email.svg");
+      background-repeat: no-repeat;
+      background-size: 5%;
+    }
+
+
+    .section-box2{
+      border: px solid;
+    }
+
+    .section-box3{
+      border: px solid;
+    }
+
+    .section-box4{
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+      border: px solid;
+      padding-top: 1%;
+      height: 93%
+    }
+
+    .section-box4 > span{
+      font-size: 0.9rem;
+    }
+
+    #facebook, #twitter, #instagram{
+      margin-right: 2%;
+    }
+    /*******************
+                      *****************
+                                  *********************
+                                                    ********************/
+    /* section styling end*/
+
+
+     /*******************
+                      *****************
+                                  *********************
+                                                    ********************/
+    /* media query styling start for 1024px*/
+
+  @media screen and (max-width: 1024px) {
+    header{
+      height: 83vh;
+    }
+
+    .nav-title-heading{
+      font-size: 2rem;
+      width: 90%;
+    }
+
+    .nav-subtitle{
+      font-size: .85rem;
+      padding-right: 9%;
+    }
+
+    .nav-image{
+      width: 48%;
+      background-image: url("images/illustration-mockups.svg");
+      background-repeat: no-repeat;
+      background-size: 99%;
+    }
+
+    .nav-image img{
+      width: 550px;
+    }
+
+    .nav-brand-box{
+      margin-right: 4%;
+    }
+
+    .nav-brand-box button{
+      width: 20%;
+    }
+
+    .desktop{
+      display: none;
+    }
+
+    
+
+    .main-box-widget h1{
+      font-size: 1.8rem;
+    }
+
+    .main-box-widget p{
+      font-size: 15px;
+    }
+
+    .main-box-container:nth-of-type(1) > .main-box-widget p,
+    .main-box-container:nth-of-type(1) > .main-box-widget h1,
+    .main-box-container:nth-of-type(3) > .main-box-widget p, 
+    .main-box-container:nth-of-type(3) > .main-box-widget h1{
+      margin-left: 10%;
+      width: 90%;
+    }
+
+    .main-box-container:nth-of-type(2) > .main-box-widget h1{
+      margin-left: 7%;
+      width: 93%;
+    }
+
+    .main-box-container:nth-of-type(2) > .main-box-widget p{
+      width: 93%;
+      padding-right: 6%;
+      margin-left: 7%;
+    } 
+
+    .main-box-container:nth-of-type(3) > .main-box-widget p{
+      padding-right: 8%;
+    }
+
+    .main-img1, .main-img3{
+      background-position-x: 80%;
+      background-size: 75%;
+    }
+
+    .main-img2{
+      background-size: 75%;
+    }
+
+    .main-box-special{
+      height: 10%;
+    }
+
+    .main-box-special h1{
+      font-size: 1.6rem;
+      margin-bottom: 7%;
+    }
+  }     
+    /* media query styling end for 1024px*/
+    /*******************
+                      *****************
+                                  *********************
+                                                    ********************/
+    /* media query styling start for 425px*/
+    @media screen and (max-width: 425px) {
+      .container{
+        height: 550vh;
+      }
+
+      body{
+        display: flex;
+        flex-flow: column;
+      }
+
+      .container{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 450vh;
+      }
+
+      /*******************
+                      *****************
+                                  *********************
+                                                    ********************/
+        /* header styling start*/
+      header{
+        display: flex;
+        flex-flow: column;
+        background-image: url("images/bg-hero-mobile.svg");
+        border: px solid;
+        height: 290vh;
+      }
+
+      .nav-brand{
+        margin-bottom: 7%;
+        border: px solid red;
+        height: 20%;
+      }
+
+      .nav-brand-box{
+        border: px solid;
+        background-size: 40%;
+        margin-bottom: 0;
+      }
+
+      .nav-image{
+        border: px solid;
+        width: 100%;
+        height: 70%;
+        background-image: url("images/illustration-mockups.svg");
+        background-repeat: no-repeat;
+        background-size: 85%;
+        background-position: center;
+      }
+
+      .nav-brand-box button{
+        width: 30%;
+        font-size: 0.9rem;
+      }
+
+      .nav-title{
+        align-items: center;
+        border: px solid;
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+      }
+
+      .nav-title-heading{
+        border: px solid;
+        font-size: 1.7rem; 
+        width: 85%;
+        margin-bottom: 5%;
+      } 
+
+      .nav-subtitle{
+        border: px solid;
+        padding-right: 0;
+        margin-bottom: 10%;
+        text-align: center;
+        font-size: 1rem;
+        padding: 0 5%;
+        font-weight: 500;
+        width: 98%;
+      }
+
+      .nav-title button{
+        width: 80%;
+        font-size: 1rem;
+        align-self: center;
+        padding: 4%;
+      }
+
+      .desktop{
+          display: none;
+        }
+        /*******************
+                      *****************
+                                  *********************
+                                                    ********************/
+        /* header styling end*/
+
+        /*******************
+                      *****************
+                                  *********************
+                                                    ********************/
+        /* main styling start*/
+      main{
+        display: flex;
+        flex-flow: column;
+        justify-content: space-evenly;
+        height: 600vh;
+      }
+
+      .main-box-container{
+        border: px solid;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        height: 100%;
+        margin-bottom: 8%;
+    }
+
+    .main-box-widget{
+      display: flex;
+      border: px solid;
+      width: 100%;
+      margin: 0;
+    }
+
+    .main-box-widget p{
+      border: px solid;
+      width: 100%;
+      text-align: center;
+    }
+
+    .main-box-widget h1{
+      border: px solid;
+      text-align: center;
+      font-size: 1.65rem;
+      width: 100%;
+    }
+
+    .main-box-container:nth-of-type(1){
+      margin-top: 18%;
+    }
+
+    .main-box-container:nth-of-type(2) > .main-box-widget p{
+      width: 100%;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+
+    .main-box-container:nth-of-type(1) > .main-box-widget p,
+    .main-box-container:nth-of-type(1) > .main-box-widget h1{
+      margin-left: 0;
+      width: 100%;
+    }
+
+    .main-box-container:nth-of-type(3) > .main-box-widget p,
+    .main-box-container:nth-of-type(3) > .main-box-widget h1{
+      margin-left: 0;
+      width: 100%;
+      padding-right: 5%;
+      padding-left: 5%;
+
+    }
+
+    .main-box-image{
+      border: px solid;
+      width: 100%;
+      order: -1;
+      background-position: center;
+      background-size: 80%;
+      height: 58%;
+
+    }
+
+    .main-box-special{
+      width: 90%;
+      border-radius: 20px;
+      position: relative;
+      top: 2.1%;
+      height: 15%;
+    }
+
+    .main-box-special h1{
+      font-size: 1.2rem;
+      padding: 0 1%;
+      margin-bottom: 7%;
+    }
+
+    .main-box-special button{
+      width: 70%;
+      font-size: 1.2rem;
+    }
+
+      /*******************
+                      *****************
+                                  *********************
+                                                    ********************/
+        /* main styling end*/
+
+      /*******************
+                      *****************
+                                  *********************
+                                                    ********************/
+        /* section styling start*/  
+      section{
+        display: flex;
+        flex-flow: column;
+        height: 290vh;
+      }
+
+      .section-box{
+        display: flex;
+        flex-flow: column;
+      }
+
+      .section-image{
+        margin-top: 25%;
+        background-size: 55%;
+        height: 10%;
+        background-position-y: center;
+      }
+
+      ul{
+        padding-left: 0;
+      }
+
+      ul li{
+        font-size: 1.1rem;
+      }
+
+      .section-box1{
+        width: 100%;
+        
+      }
+
+      .section-box1  p{
+        font-size: 1.1rem;
+      }
+
+      .section-box2 ul{
+        margin-bottom: 0;
+      }
+
+      .section-box3 ul{
+        margin-top: 0;
+      }
+
+      .section-box4{
+        margin-top: 5%;
+        text-align: center;
+        padding-bottom: 5%;
+      }
+
+      .section-box4 .section-image-icon img{
+        margin-bottom: 5%
+      }
+            /*******************
+                      *****************
+                                  *********************
+                                                    ********************/
+        /* section styling end*/
+    }
+    /*******************
+                      *****************
+                                  *********************
+                                                    ********************/
+        /* media query styling end for 425px*/
+
+    @media screen and (max-width: 375px) {
+      .container{
+        height: 550vh;
+      }
+
+      body{
+        display: flex;
+        flex-flow: column;
+      }
+
+      .container{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 450vh;
+      }
+
+      /*******************
+                      *****************
+                                  *********************
+                                                    ********************/
+        /* header styling start*/
+      header{
+        display: flex;
+        flex-flow: column;
+        background-image: url("images/bg-hero-mobile.svg");
+        border: px solid;
+        height: 290vh;
+      }
+
+      .nav-brand{
+        margin-bottom: 7%;
+        border: px solid red;
+        height: 20%;
+      }
+
+      .nav-brand-box{
+        border: px solid;
+        background-size: 40%;
+        margin-bottom: 0;
+      }
+
+      .nav-image{
+        border: px solid;
+        width: 100%;
+        height: 70%;
+        background-image: url("images/illustration-mockups.svg");
+        background-repeat: no-repeat;
+        background-size: 85%;
+        background-position: center;
+      }
+
+      .nav-brand-box button{
+        width: 30%;
+        font-size: 0.9rem;
+      }
+
+      .nav-title{
+        align-items: center;
+        border: px solid;
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+      }
+
+      .nav-title-heading{
+        border: px solid;
+        font-size: 1.7rem; 
+        width: 85%;
+        margin-bottom: 5%;
+      } 
+
+      .nav-subtitle{
+        border: px solid;
+        padding-right: 0;
+        margin-bottom: 10%;
+        text-align: center;
+        font-size: 1rem;
+        padding: 0 5%;
+        font-weight: 500;
+        width: 98%;
+      }
+
+      .nav-title button{
+        width: 80%;
+        font-size: 1rem;
+        align-self: center;
+        padding: 4%;
+      }
+
+      .desktop{
+          display: none;
+        }
+        /*******************
+                      *****************
+                                  *********************
+                                                    ********************/
+        /* header styling end*/
+
+        /*******************
+                      *****************
+                                  *********************
+                                                    ********************/
+        /* main styling start*/
+      main{
+        display: flex;
+        flex-flow: column;
+        justify-content: space-evenly;
+        height: 600vh;
+      }
+
+      .main-box-container{
+        border: px solid;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        height: 100%;
+        margin-bottom: 8%;
+    }
+
+    .main-box-widget{
+      display: flex;
+      border: px solid;
+      width: 100%;
+      margin: 0;
+    }
+
+    .main-box-widget p{
+      border: px solid;
+      width: 100%;
+      text-align: center;
+    }
+
+    .main-box-widget h1{
+      border: px solid;
+      text-align: center;
+      font-size: 1.65rem;
+      width: 100%;
+    }
+
+    .main-box-container:nth-of-type(1){
+      margin-top: 18%;
+    }
+
+    .main-box-container:nth-of-type(2) > .main-box-widget p{
+      width: 100%;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+
+    .main-box-container:nth-of-type(1) > .main-box-widget p,
+    .main-box-container:nth-of-type(1) > .main-box-widget h1{
+      margin-left: 0;
+      width: 100%;
+    }
+
+    .main-box-container:nth-of-type(3) > .main-box-widget p,
+    .main-box-container:nth-of-type(3) > .main-box-widget h1{
+      margin-left: 0;
+      width: 100%;
+      padding-right: 5%;
+      padding-left: 5%;
+
+    }
+
+    .main-box-image{
+      border: px solid;
+      width: 100%;
+      order: -1;
+      background-position: center;
+      background-size: 80%;
+      height: 58%;
+
+    }
+
+    .main-box-special{
+      width: 90%;
+      border-radius: 20px;
+      position: relative;
+      top: 2.1%;
+      height: 15%;
+    }
+
+    .main-box-special h1{
+      font-size: 1.2rem;
+      padding: 0 1%;
+      margin-bottom: 7%;
+    }
+
+    .main-box-special button{
+      width: 70%;
+      font-size: 1.2rem;
+    }
+
+      /*******************
+                      *****************
+                                  *********************
+                                                    ********************/
+        /* main styling end*/
+
+      /*******************
+                      *****************
+                                  *********************
+                                                    ********************/
+        /* section styling start*/  
+      section{
+        display: flex;
+        flex-flow: column;
+        height: 290vh;
+      }
+
+      .section-box{
+        display: flex;
+        flex-flow: column;
+      }
+
+      .section-image{
+        margin-top: 25%;
+        background-size: 55%;
+        height: 10%;
+        background-position-y: center;
+      }
+
+      ul{
+        padding-left: 0;
+      }
+
+      ul li{
+        font-size: 1.1rem;
+      }
+
+      .section-box1{
+        width: 100%;
+        
+      }
+
+      .section-box1  p{
+        font-size: 1.1rem;
+      }
+
+      .section-box2 ul{
+        margin-bottom: 0;
+      }
+
+      .section-box3 ul{
+        margin-top: 0;
+      }
+
+      .section-box4{
+        margin-top: 5%;
+        text-align: center;
+        padding-bottom: 5%;
+      }
+
+      .section-box4 .section-image-icon img{
+        margin-bottom: 5%
+      }
+            /*******************
+                      *****************
+                                  *********************
+                                                    ********************/
+        /* section styling end*/
+    }
+    /*******************
+                      *****************
+                                  *********************
+                                                    ********************/
+        /* media query styling end*/
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="nav-brand">
+        <div class="nav-brand-box">
+        <button type="button"><a href="#">Try It Free</a></button>
+        </div>
+      </div>
+      <div class="nav-title">
+        <h1 class="nav-title-heading">
+            Build The Community Your Fans Will Love
+        </h1>
+
+        <p class="nav-subtitle">
+          Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
+          Create connections with your users as you engage in genuine discussion.
+        </p>
+
+        <button type="button"><a href="#">Get Started For Free</a></button>
+      </div>
+      <div class="nav-image">
+       <img src="./images/illustration-mockups.svg"  class="desktop" alt="">
+      </div>
+    </header>
+    <main>
+        
+         <div class="main-box-container">  
+            <div class="main-box-widget">
+                <h1>Grow Together</h1>
+                <p>
+                  Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.
+                </p>
+            </div>
+            <div class="main-box-image main-img1">
+            </div>
+         </div> 
+
+          <div class="main-box-container">
+            <div class="main-box-image main-img2">
+            </div>
+            <div class="main-box-widget">
+              <h1>Flowing Conversations</h1>
+              <p>
+                You wouldn't paginate a conversation in real life, so why do it online? Our threads 
+                have just-in-time loading for a more natural flow.
+              </p>
+            </div>
+          </div>
+          
+          <div class="main-box-container">
+            <div class="main-box-widget">
+              <h1>Your Users</h1>
+              <p>
+                It takes no time at all to integrate Huddle with your app's authentication solution. 
+                This means, once signed in to your app, your users can start chatting immediately.
+              </p>
+            </div>
+            <div class="main-box-image main-img3">
+            </div>
+          </div>
+         
+    </main>
+
+    <div class="main-box-special">
+      <h1>Ready To Build Your Community?</h1>
+      <button type="button"><a href="#">Get Started For Free</a></button>
+  </div>
+
+    <section>
+      <div class="section-image">
+        
+      </div>
+      <div class="section-box">
+        <div class="section-box1">
+          <div class="section-box1-main">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+              incididunt ut labore et dolore magna aliqua
+            </p>
+          </div>
+
+          <div class="section-box1-main">
+            <p>
+              +1-543-123-4567
+            </p>
+          </div>
+
+          <div class="section-box1-main">
+            <p>
+              example@huddle.com
+            </p>
+          </div>
+
+        </div>
+        <div class="section-box2">
+            <ul>
+              <li>About Us</li>
+              <li>What We Do</li>
+              <li>FAQ</li>
+            </ul>
+        </div>
+
+        <div class="section-box3">
+          <ul>
+            <li>Career</li>
+            <li>Blog</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+
+        <div class="section-box4">
+          <div class="section-image-icon">
+          <i class="fa-brands fa-facebook" id="facebook"></i>
+          <i class="fa-brands fa-twitter" id="twitter"></i> 
+          <i class="fa-brands fa-instagram" id="instagram"></i>
+          </div>
+          <span>
+            &copy; Copyright 2018 Huddle. All rights reserved
+          </span>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer>
+</body>
+</html>
